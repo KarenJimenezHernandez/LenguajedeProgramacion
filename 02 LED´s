@@ -1,0 +1,42 @@
+//Programa para el cálculo de resistencias para un LED dependiendo de su color y voltaje de la fuente.//
+//Karen Jiménez Hernández, 27 de septiembre del 2020.//
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float V1, V2,V3, I1, I2, I3, R1, R2, R3;
+
+
+    printf("Toma en cuenta la siguiente relación entre el color del LED, el voltaje y la corriente");
+    printf("\t\t      LED              V          I\n");
+    printf("\t\tRojo std              1.5       0.015\n");
+    printf("\t\tVerde std             1.8       0.015\n");
+    printf("\t\tAmarillo std          1.8       0.015\n");
+    printf("\t\tBlanco                2.8       0.02\n");
+    printf("\t\tAmarillo brillante     2        0.02\n");
+    printf("\t\tVerde brillante        3        0.02\n");
+    printf("\t\tAzul brillante         3        0.02\n");
+    printf("\t\tRojo brillante         2        0.02\n\n");
+
+    printf("Selecciona 3 LED's de color distinto para mostrar la resistencia que necesitaran\n");
+    printf("Ingresa el valor del voltaje y corriente correspondiente al primer LED, separados por una coma\n");
+    scanf("%f, %f", &V1, &I1);
+    R1=(V1/I1);
+    
+    printf("El valor de la resistencia 1 para el LED es: %.2f Ohms\n",R1);
+
+    printf("Ingresa el valor del voltaje y corriente correspondiente al segundo LED, separados por una coma\n");
+    scanf("%f, %f", &V2, &I2);
+    R2=(V2/I2);
+
+    printf("El valor de la resistencia 2 para el LED es: %.2f Ohms\n",R2);
+
+    printf("Ingresa el valor del voltaje y corriente correspondiente al tercer LED, separados por una coma\n");
+    scanf("%f, %f", &V3, &I3);
+    R3=(V3/I3);
+
+    printf("El valor de la resistencia 3 para el LED es: %.2f Ohms\n",R3);
+
+    return 0;
+}
