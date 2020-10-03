@@ -1,0 +1,29 @@
+//Programa para calcular la corriente//
+//Karen Jiménez Hernández, 27 de septiembre del 2020//
+#include <stdio.h>
+#include <stdlib.h>
+
+//Función main inicia el programa ejecutable//
+int main()
+{
+   int R1, R2, R3;
+   float V, I1, I2, I3, I4;
+
+  printf("Ingrese el valor de la resistencias, separadas por una coma");
+  scanf("%d %d %d", &R1, &R2, &R3);
+
+  printf("Ingrese el valor del voltaje de la fuente");
+  scanf("%f", &V);
+
+  I1= (V/(1/R1));
+  I2= (V/(1/R2));
+  I3= (V/(1/R3));
+  I4= (V/(1/(1/R1)+(1/R2)+(1/R3)));
+
+  printf("El valor La intensidad total del circuito es: %f.2A\n", I4);
+  printf("El valor La intensidad en la resistencia 1 : %f.2A\n", I1);
+  printf("El valor La intensidad en la resistencia 2 es:" "%f.2A", I2);
+  printf("El valor La intensidad en la resistencia 3 es: %f.2A\n", I3);
+
+    return 0;
+} //Terminar función main//
