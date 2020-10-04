@@ -1,3 +1,5 @@
+//Este programa sirve para ingresar 3 calificaciones dadas por letras y ver si el promedio es aprobatorio o reprobatorio//
+//Karen Jiménez Hernández 2 de octubre del 2020//
 #include <stdio.h>
 #include <stdlib.h>
 
