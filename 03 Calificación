@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char L1, L2, L3;
+    int C1, C2, C3;
+    float Prom;
+
+    printf("Ingresa las calificaciones de cada parcial\n");
+    scanf("%c, %c, %c", &L1, &L2, &L3);
+
+    if(L1=='A'||L1=='a')
+    {C1=10;}
+    else if (L1=='B'||L1=='b')
+    {C1=9;}
+    else if (L1=='C'||L1=='c')
+    {C1=8;}
+    else if (L1=='D'||L1=='d')
+    {C1=7;}
+    else if (L1=='E'||L1=='e')
+    {C1=6;}
+    else if (L1=='F'||L1=='f')
+    {C1=5;}
+
+     if(L2=='A'||L2=='a')
+    {C2=10;}
+    else if (L2=='B'||L2=='b')
+    {C2=9;}
+    else if (L2=='C'||L2=='c')
+    {C2=8;}
+    else if (L2=='D'||L2=='d')
+    {C2=7;}
+    else if (L2=='E'||L2=='e')
+    {C2=6;}
+    else if (L2=='F'||L2=='f')
+    {C2=5;}
+
+     if(L3=='A'||L3=='a')
+    {C3=10;}
+    else if (L3=='B'||L3=='b')
+    {C3=9;}
+    else if (L3='C'||L3=='c')
+    {C3=8;}
+    else if (L3=='D'||L3=='d')
+    {C3=7;}
+    else if (L3=='E'||L3=='e')
+    {C3=6;}
+    else if (L3=='F'||L3=='f')
+    {C3=5;}
+
+    Prom=(C1+C2+C3)/3;
+
+    if(Prom>=6)
+    {
+        printf("Tu promedio es aprobatorio: %f.2", Prom);
+    }
+    else{
+        printf("Tu promedio es reprobatorio: %f.2", Prom);
+    }
+
+}
