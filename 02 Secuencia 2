@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Este programa sirve para mostrar una secuencia de valores de salida dados N (entrada).//
+//Karen Jimenez Hernnandez 10 de octubre del 2020//
+
+int main()
+{
+    int cont=0, i, x, N;
+
+  printf("¿Que valor tendra N?");
+  scanf("%d", &N);
+
+  while(cont<=(N+(N+1)))
+  {
+    i=cont;
+    x=(3*N)+2*i;
+    printf("%d \n", x);
+    cont=cont+1;
+  }
+
+  return 0;
+}
