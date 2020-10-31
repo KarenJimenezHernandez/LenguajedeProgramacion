@@ -1,0 +1,103 @@
+//Karen Jimenez Hernandez 30 de octubre del 2020//
+//Este programa muestra distintas secuencias, dependiendo de la seleccionada por el usuarios//
+//Lenguaje de Programación//
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int seleccion, subs, n, menu, cont, i, j, k, a, b, c, d; //Aquí se encuentran todas las variables necesarias para el proceso del menu y los contadores de series, segun como se presente puede ser: contador, espacio y asteriscos en la primera opción, y contador para la segunda y tercera opción//
+    float suma;
+    double valores, pi;
+
+
+    do{
+        printf("Selecciona el numero de la secuencia a mostrar \n");
+        printf("1) Imprimir triangulos \n");
+        printf("2) Imprimir la secuencia de calculo de valor de Pi \n");
+        printf("3) Imprimir una secuencia de numeros \n");
+        printf("Si deseas salir, pulsa cualquier otro numero:  ");
+
+        scanf("%d", &seleccion);
+
+        if(seleccion==1)
+            {printf("Ingresa de cuantas lineas quieres que sea el triangulo: \n");
+            scanf("%d", &cont);
+                printf("Primer triangulo: \n");
+                for(i=1; i<=cont; i++)
+                {for (j = 0; j < i; j++)
+                {printf("*");}
+                printf("\n");}
+                printf("Segundo triangulo:\n");
+                for(i=cont; i>=1; i--)
+                {for (j = 0; j < i; j++)
+                {printf("*");}
+                printf("\n");}
+                printf("Tercer triangulo: \n");
+                for(i=1; i<=cont; i++)
+                {for(j=1; j<=i; j++)
+                {printf(" ");}
+                for(k=cont; k>=i; k--)
+                {printf("*");}
+                printf("\n");}
+                printf("Cuarto triangulo: \n");
+                for(i=1; i<=cont; i++)
+                {for (j=cont; j>=i; j--)
+                {printf(" ");}
+                for (k=1; k<=i; k++)
+                {printf("*");}
+                printf ("\n");}
+
+            printf("¿Deseas ver otro programa? \n");
+            printf("Ingresa 1 si tu respuesta es si \n");
+            printf("Ingresa cualquier otro numero si te respuesta es no: ");
+            scanf("%d", &menu);}
+        if(seleccion==2)
+        {
+            printf("¿?\n ");
+            scanf("%d",&cont);
+              j=1;
+              for (i = 0; i < cont; i++)
+              {valores = 4 / (double)j;
+              if (i % 2 == 1)
+              {pi -= valores;}
+              else
+              {pi += valores;
+              j += 2;}}
+
+            printf("\t El valor de Pi es: %.16f\n", pi);
+
+            printf("¿Deseas ver otro programa?");
+            printf("Ingresa 1 si tu respuesta es si \n");
+            printf("Ingresa cualquier otro numero si te respuesta es  no");
+            scanf("%d", &menu);
+        }
+
+        if(seleccion==3)
+        {printf("¿Cuantos numeros quieres que te muestren las secuencias\n");
+          scanf("%d", &cont);
+          a=1;
+          b=2;
+          c=30;
+          d=15;
+          j=1;
+          printf("La secuencias se muestran por columnas \n");
+          printf("A  B  C  D \n");
+            while(j<=cont)
+            {printf("%d, ", a);
+            a=a+2;
+            printf("%d, ", b);
+            b=b+3;
+            printf("%d, ", c);
+            c=c-10;
+            printf("%d, \n", d);
+            d=d+8;
+            j++; }
+            printf("¿Deseas ver otro programa?\n");
+            printf("Ingresa 1 si tu respuesta es si \n");
+            printf("Ingresa cualquier otro numero si te respuesta es  no");
+            scanf("%d", &menu);}
+    }while(menu==1);
+
+    return 0;
+}
